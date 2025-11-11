@@ -1,0 +1,41 @@
+html {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+}
+
+body {
+  font-family: "GeneralSans-Medium";
+}
+
+p {
+  font-size: 3rem;
+  line-height: 4rem;
+  border-bottom: 1px solid black;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Full-bleed background layer */
+.background {
+  position: fixed;
+  inset: 0; /* shorthand for top/right/bottom/left: 0 */
+  z-index: -1;
+  background-color: rgb(127, 127, 127);
+  transition: background-color 0.2s ease;
+}
+
+/* Content layer */
+.page {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  background: transparent;
+}
+
