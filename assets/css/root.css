@@ -1,15 +1,34 @@
 html {
-  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  background: #fff;
+}
+
+#wrapper {
+  padding: 1.5rem;
 }
 
 body {
   font-family: "GeneralSans-Medium";
 }
 
-p {
-  font-size: 3rem;
-  line-height: 4rem;
-  border-bottom: 1px solid black;
+p, a {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  text-decoration: none;
+  color: #000;
+}
+
+nav {
+  text-align: right;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  place-content: space-between;
 }
 
 html, body {
