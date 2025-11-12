@@ -1,3 +1,4 @@
+/*
 // Select background element
 const bg = document.querySelector('.background');
 
@@ -52,4 +53,18 @@ function animate() {
 }
 
 animate();
+*/
 
+document.addEventListener('DOMContentLoaded', function() {
+  const hero_img = document.getElementById("hero_img");
+  let half_table = true;
+  hero_img.addEventListener("click", function() {
+    if (half_table) {
+      hero_img.src = "assets/img/table_gray_bg.png"
+    }
+    else {
+      hero_img.src = "assets/img/side_table_side_gray_bg.png"
+    }
+    half_table = !half_table;
+  })
+})
