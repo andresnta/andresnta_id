@@ -1,60 +1,61 @@
 html {
-  background: #fff;
+	background: #fff;
 }
 
 #wrapper {
-  padding: 1.5rem;
+	padding: 1.5rem;
 }
 
 body {
-  font-family: "GeneralSans-Regular";
+	font-family: "GeneralSans-Medium";
 }
 
-p, a {
-  font-size: 1.2rem;
-  line-height: 1.6rem;
-  text-decoration: none;
-  color: #000;
+p,
+a {
+	font-size: 1.2rem;
+	line-height: 1.6rem;
+	text-decoration: none;
+	color: #000;
 }
 
 nav {
-  text-align: right;
+	text-align: right;
 }
 
 h2 {
-  font-size: 1.5rem;
+	font-size: 1.5rem;
 }
 
 header {
-  display: flex;
-  flex-direction: row;
-  place-content: space-between;
+	display: flex;
+	flex-direction: row;
+	place-content: space-between;
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
+html,
+body {
+	height: 100%;
+	margin: 0;
 }
 
 body {
-  overflow-x: hidden;
-  position: relative;
+	overflow-x: hidden;
+	position: relative;
 }
 
 /* Full-bleed background layer */
 .background {
-  position: fixed;
-  inset: 0; /* shorthand for top/right/bottom/left: 0 */
-  z-index: -1;
-  background-color: rgb(127, 127, 127);
-  transition: background-color 0.2s ease;
+	position: fixed;
+	inset: 0; /* shorthand for top/right/bottom/left: 0 */
+	z-index: -1;
+	background-color: rgb(127, 127, 127);
+	transition: background-color 0.2s ease;
 }
 
 /* Content layer */
 .page {
-  position: relative;
-  z-index: 1;
-  min-height: 100vh;
-  background: transparent;
+	position: relative;
+	z-index: 1;
+	min-height: 100vh;
+	background: transparent;
 }
-
