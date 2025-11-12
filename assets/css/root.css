@@ -16,6 +16,11 @@ a {
 	line-height: 1.6rem;
 	text-decoration: none;
 	color: #000;
+  transition: 0.4s; 
+}
+
+nav a:hover {
+  color: #888;
 }
 
 nav {
