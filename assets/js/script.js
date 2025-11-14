@@ -56,6 +56,8 @@ animate();
 */
 
 document.addEventListener('DOMContentLoaded', function() {
+
+  // Toggle picture
   const hero_img = document.getElementById("hero_img");
   let half_table = true;
   hero_img.addEventListener("click", function() {
@@ -68,4 +70,11 @@ document.addEventListener('DOMContentLoaded', function() {
     half_table = !half_table;
     console.log(half_table);
   })
-})
+  })
+  const project_toggle = document.querySelector(".project_toggle");
+  const project_list = document.querySelector(".project_list");
+  project_toggle.addEventListener("click", function() {
+    project_list.classList.toggle("open")
+  })
+
+
