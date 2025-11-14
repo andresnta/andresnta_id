@@ -15,19 +15,14 @@ html {
 }
 
 .project_list {
-  opacity: 0%;
   max-height: 0;
   padding: 0;
   transition: all 0.4s ease;
-  opacity: 0;
+  overflow: hidden;
 }
 
 .open {
   max-height: 100vh;
-  display: block;
-  opacity: 100%;
-  opacity: 100%;
-
 }
 
 #contact {
