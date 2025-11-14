@@ -10,6 +10,14 @@ html {
   border-radius: 5px;
 }
 
+#contact {
+  text-align: right;
+  margin-top: 2rem;
+}
+ #logo a{
+  font-size: 1.5rem;
+ }
+
 body {
 	font-family: "GeneralSans-Medium";
 }

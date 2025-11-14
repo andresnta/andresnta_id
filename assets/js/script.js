@@ -66,5 +66,6 @@ document.addEventListener('DOMContentLoaded', function() {
       hero_img.src = "assets/img/side_table_side_gray_bg.png"
     }
     half_table = !half_table;
+    console.log(half_table);
   })
 })
