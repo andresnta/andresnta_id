@@ -7,30 +7,39 @@
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/root.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/fonts.css" />
+    <script src="assets/js/script.js"></script>    
   </head>
   <body>
-    <div id="wrapper">
+    <div class="wrapper">
     <header>
-      <h2 id="logo"><a href="index">Andres Santarossa</a></h2>
+      <h2 class="logo"><a href="index">Andres Santarossa</a></h2>
       <nav>
         <ul>
-          <li><a class="project_toggle">Projects</a></li>
-            <ul class="project_list">
-              <li><a href="">View all</a></li>
-              <li><a href="">Ribbon table</a></li>
-              <li><a href="">Disco lamp</a></li>
-              <li><a href="">Nun lamp</a></li>
-              <li><a href="">Crate storage</a></li>
+          <li><a class="project-toggle">Projects</a></li>
+            <ul class="project-list">
+              <li><a data-id="default" href="#">View All</a></li>
+              <li><a data-id="1" href="#">Ribbon table full</a></li>
+              <li><a data-id="2" href="#">Ribbon table half</a></li>
             </ul>
           <li><a href="about">About</a></li>
           <li><a href="contact">Contact</a></li>
         </ul>
       </nav>
     </header>
-      <main>
-        <img id="hero_img" src="assets/img/side_table_side_gray_bg.png" alt="">
-      </main>
+      <div class="hero-img">
+        <div class="project default active">
+        <img src="assets/img/side_table_side_gray_bg.png" alt="">
+      </img>
+      </div>
+      <div class="project project-1">
+        <img src="assets/img/table_gray_bg.png" alt="">
+      </img>
+      </div>
+      <div class="project project-2">
+        <img src="assets/img/side_table_side_gray_bg.png" alt="">
+      </img>
+      </div>
+</div>
      </div>
   </body>
-    <script src="assets/js/script.js"></script>
 </html>

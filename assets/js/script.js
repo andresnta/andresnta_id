@@ -57,24 +57,32 @@ animate();
 
 document.addEventListener('DOMContentLoaded', function() {
 
-  // Toggle picture
-  const hero_img = document.getElementById("hero_img");
-  let half_table = true;
-  hero_img.addEventListener("click", function() {
-    if (half_table) {
-      hero_img.src = "assets/img/table_gray_bg.png"
-    }
-    else {
-      hero_img.src = "assets/img/side_table_side_gray_bg.png"
-    }
-    half_table = !half_table;
-    console.log(half_table);
-  })
-  })
-  const project_toggle = document.querySelector(".project_toggle");
-  const project_list = document.querySelector(".project_list");
+  // Toggle menu list
+  const project_toggle = document.querySelector(".project-toggle");
+  const project_list = document.querySelector(".project-list");
   project_toggle.addEventListener("click", function() {
-    project_list.classList.toggle("open")
+    project_list.classList.toggle("open");
   })
+
+  // Change heor image on hover
+  const projects = document.querySelectorAll(".project-list li a");
+  const drop_inner = document.querySelector(".project-list");
+  const project_images = document.querySelectorAll(".hero-img .project");
+  const default_project = document.querySelector(".hero-img .default");
+
+  projects.forEach(function(e) {
+    let project_id = e.getAttribute("data-id");
+
+    e.addEventListener("mouseover", function() {
+      project_images[project_id].classList.add("active");
+      default_project.classList.remove("active");
+    })
+    e.addEventListener("mouseout", function() {
+      project_images[project_id].classList.remove("active");
+      default_project.classList.add("active");
+    })
+  })
+  })
+
 
 
