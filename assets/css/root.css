@@ -1,9 +1,22 @@
-html {
-	background: #fff;
+:root {
+  --clr-text: #000;
+  --clr-primery: #000;
+  --clr-accent: #000;
+
+  --ff-medium: 'GeneralSans-Medium' ;
+  --ff-regular:'GeneralSans-Regular';
 }
 
-.wrapper {
+html {
+  box-sizing: border-box;
+  font-family: var(--ff-medium);
+  color: var(--clr-text);
+  font-size: 1.125rem;
 }
+
+
+
+.wrapper {}
 
 .content {
 }
@@ -60,11 +73,6 @@ nav {
   margin-top: 2rem;
 }
 
-
-body {
-	font-family: "GeneralSans-Medium";
-}
-
 p,
 a {
 	font-size: 1.2rem;
@@ -77,8 +85,6 @@ a {
 nav a:hover {
   color: #888;
 }
-
-
 
 h2 {
 	font-size: 1.5rem;
@@ -93,3 +99,4 @@ h2 {
 .hero-img .project.active {
   opacity: 100%
 }
+
