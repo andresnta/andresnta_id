@@ -52,6 +52,7 @@ nav {
 
 .hero-img img {
   border-radius: 5px;
+  max-width: 90lvw;
 }
 
 .project-toggle {
@@ -60,12 +61,12 @@ nav {
 
 .project-list {
   max-height: 0;
-  transition: max-height 0.4s ease;
+  transition: max-height .4s;
   overflow: hidden;
 }
 
 .project-list.open {
-  max-height: 50vh;
+  max-height: 70vh;
 }
 
 .contact {
