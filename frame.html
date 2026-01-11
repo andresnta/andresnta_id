@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+      #pill {
+        width: 120px;
+        height: 120px;
+        border-radius: 800px;
+        background: blueviolet;
+        overflow: clip;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="pill"></div>
+    <script>
+      const pill = document.getElementById("pill");
+      const body = document.querySelector("body");
+
+      let currentPos = -300;
+      function shake() {
+        currentPos += 10;
+        pill.style.transform = `translateX(${currentPos}px)`;
+        if (currentPos > window.innerWidth) {
+          console.log("outta sight");
+          currentPos = -300;
+        }
+        requestAnimationFrame(shake);
+      }
+      shake();
+      body.style.background = "hotpink";
+    </script>
+  </body>
+</html>

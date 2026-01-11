@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      a {
+        text-decoration: none;
+        color: rgba(51, 51, 51, 0.25);
+        transition: color 0.2s ease;
+      }
+      a:hover {
+        color: rgba(51, 51, 51, 1);
+      }
+
+      body {
+        font-family: sans-serif;
+        font-size: 1.2rem;
+      }
+
+      .projects-drop--toggle {
+        cursor: pointer;
+      }
+
+      .nav .projects-drop--inner {
+        max-height: 0;
+        padding: 0;
+        -webkit-transition: all 0.4s ease;
+        -o-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+        overflow: hidden;
+      }
+      .nav .projects-drop--inner.open {
+        padding: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="nav">
+      <div class="menu">
+        <div class="menu--inner">
+          <div class="projects-drop">
+            <p class="projects-drop--toggle">Projects</p>
+            <div class="projects-drop--inner">
+              <p><a data-id="default" href="/projects/">View All</a></p>
+              <p>
+                <a
+                  data-id="0"
+                  href="https://daniel-schofield.com/project/allay-chair/"
+                  >Allay Chair</a
+                >
+              </p>
+              <p>
+                <a
+                  data-id="1"
+                  href="https://daniel-schofield.com/project/anofax-clock/"
+                  >Anofax Clock</a
+                >
+              </p>
+              <p>
+                <a
+                  data-id="2"
+                  href="https://daniel-schofield.com/project/another-sofa/"
+                  >Another Sofa</a
+                >
+              </p>
+              <p>
+                <a
+                  data-id="3"
+                  href="https://daniel-schofield.com/project/blur-tables/"
+                  >Blur Tables</a
+                >
+              </p>
+              <p>
+                <a
+                  data-id="4"
+                  href="https://daniel-schofield.com/project/common-room-for-ahec/"
+                  >Common Room</a
+                >
+              </p>
+              <p>
+                <a
+                  data-id="5"
+                  href="https://daniel-schofield.com/project/crofton-stools/"
+                  >Crofton Stools</a
+                >
+              </p>
+              <p>
+                <a data-id="6" href="https://daniel-schofield.com/project/finn/"
+                  >Finn</a
+                >
+              </p>
+              <p>
+                <a
+                  data-id="7"
+                  href="https://daniel-schofield.com/project/landmark-tables/"
+                  >Landmark</a
+                >
+              </p>
+              <p>
+                <a
+                  data-id="8"
+                  href="https://daniel-schofield.com/project/mag-tables/"
+                  >Mag Tables</a
+                >
+              </p>
+              <p>
+                <a
+                  data-id="9"
+                  href="https://daniel-schofield.com/project/patio/"
+                  >Patio Chair</a
+                >
+              </p>
+              <p>
+                <a
+                  data-id="10"
+                  href="https://daniel-schofield.com/project/ray-lamp/"
+                  >Ray Lamp</a
+                >
+              </p>
+              <p>
+                <a data-id="11" href="https://daniel-schofield.com/project/rin/"
+                  >Rin</a
+                >
+              </p>
+              <p>
+                <a
+                  data-id="12"
+                  href="https://daniel-schofield.com/project/signet/"
+                  >Signet</a
+                >
+              </p>
+              <p>
+                <a
+                  data-id="13"
+                  href="https://daniel-schofield.com/project/sketches-of-seating/"
+                  >Sketches of&#8230;</a
+                >
+              </p>
+              <p>
+                <a
+                  data-id="14"
+                  href="https://daniel-schofield.com/project/stopper/"
+                  >Stopper</a
+                >
+              </p>
+              <p>
+                <a
+                  data-id="15"
+                  href="https://daniel-schofield.com/project/tour-folding-chair/"
+                  >Tour Folding Chair</a
+                >
+              </p>
+              <p>
+                <a
+                  data-id="16"
+                  href="https://daniel-schofield.com/project/valley-tables/"
+                  >Valley Tables</a
+                >
+              </p>
+              <p>
+                <a
+                  data-id="17"
+                  href="https://daniel-schofield.com/project/vent/"
+                  >Vent Light</a
+                >
+              </p>
+            </div>
+          </div>
+          <p><a href="/about/">About</a></p>
+          <p><a href="/contact/">Contact</a></p>
+        </div>
+      </div>
+    </header>
+    <script>
+      const dropToggle = document.querySelector(".projects-drop--toggle");
+      const dropInner = document.querySelector(".projects-drop--inner");
+      const aCount = dropInner.querySelectorAll("a");
+      const lineHeight = 32;
+      dropToggle.addEventListener("click", () => {
+        if (dropInner.classList.contains("open")) {
+          dropInner.style.maxHeight = 0;
+          dropInner.classList.remove("open");
+        } else {
+          dropInner.style.maxHeight = `${aCount.length * lineHeight}px`;
+          dropInner.classList.add("open");
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,90 +1,88 @@
 :root {
-  --clr-text: #000;
-  --clr-primery: #000;
-  --clr-accent: #000;
+	--clr-text: #000;
+	--clr-primery: #000;
+	--clr-accent: #000;
 
-  --ff-medium: 'GeneralSans-Medium' ;
-  --ff-regular:'GeneralSans-Regular';
+	--ff-medium: "GeneralSans-Medium";
+	--ff-regular: "GeneralSans-Regular";
 }
 
 html {
-  box-sizing: border-box;
-  font-family: var(--ff-medium);
-  color: var(--clr-text);
-  font-size: 1.125rem;
-}
-
-
-
-.wrapper {}
-
-.content {
+	box-sizing: border-box;
+	font-family: var(--ff-medium);
+	color: var(--clr-text);
+	font-size: 1.125rem;
 }
 
 header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding: 1.5rem;
-  z-index: 10;
-
-
-	display: flex;
-	flex-direction: row;
-	place-content: space-between;
+	position: sticky;
+	padding: 1.5rem;
+	z-index: 10;
+	position: fixed;
 }
 
 nav {
 	text-align: right;
-  padding
+	text-transform: uppercase;
+	background: rgba(224, 224, 224, 0.8);
+	backdrop-filter: blur(8px);
+	padding: 0.8em;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: fit-content;
 }
 
 .hero-img {
-  position: absolute;
-  top: 8rem;
-  left: 1.5rem;
-} 
+	position: absolute;
+	top: 8rem;
+	left: 1.5rem;
+}
 
- .logo a{
-  font-size: 1.5rem;
- }
+.logo a {
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	padding: 0.6em 0;
+}
 
 .hero-img img {
-  border-radius: 5px;
-  max-width: 90lvw;
+	border-radius: 5px;
+	max-width: 90lvw;
 }
 
 .project-toggle {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .project-list {
-  max-height: 0;
-  transition: max-height .4s;
-  overflow: hidden;
+	max-height: 0;
+	padding: 0;
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+	overflow: hidden;
 }
 
 .project-list.open {
-  max-height: 70vh;
+	padding: 20px 0;
 }
 
 .contact {
-  text-align: right;
-  margin-top: 2rem;
+	text-align: right;
+	margin-top: 2rem;
 }
 
 p,
 a {
-	font-size: 1.2rem;
-	line-height: 1.6rem;
+	font-size: 0.9rem;
+	line-height: 1.2rem;
 	text-decoration: none;
 	color: #000;
-  transition: color 0.4s ease; 
+	transition: color 0.4s ease;
 }
 
 nav a:hover {
-  color: #888;
+	color: #888;
 }
 
 h2 {
@@ -92,12 +90,11 @@ h2 {
 }
 
 .hero-img div {
-  position: absolute;
-  opacity: 0%;
-  transition: opacity 0.4s ease;
+	position: absolute;
+	opacity: 0%;
+	transition: opacity 0.4s ease;
 }
 
 .hero-img .project.active {
-  opacity: 100%
+	opacity: 100%;
 }
-

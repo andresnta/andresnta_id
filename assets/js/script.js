@@ -55,34 +55,49 @@ function animate() {
 animate();
 */
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
+	// Toggle menu list
+	console.log("Dom loaded");
+	const project_toggle = document.querySelector(".project-toggle");
+	const project_list = document.querySelector(".project-list");
+	const links = project_list.querySelectorAll("a");
+	const linkHeight = 32;
 
-  // Toggle menu list
-  const project_toggle = document.querySelector(".project-toggle");
-  const project_list = document.querySelector(".project-list");
-  project_toggle.addEventListener("click", function() {
-    project_list.classList.toggle("open");
-  })
+	project_toggle.addEventListener("click", () => {
+		if (project_list.classList.contains("open")) {
+			project_list.style.maxHeight = 0;
+			project_list.classList.remove("open");
+		} else {
+			project_list.style.maxHeight = `${links.length * linkHeight + 40}px`;
+			project_list.classList.add("open");
+		}
+	});
+	document.addEventListener("keydown", () => {
+		if (project_list.classList.contains("open")) {
+			project_list.style.maxHeight = 0;
+			project_list.classList.remove("open");
+		} else {
+			project_list.style.maxHeight = `${links.length * linkHeight + 40}px`;
+			project_list.classList.add("open");
+		}
+	});
 
-  // Change heor image on hover
-  const projects = document.querySelectorAll(".project-list li a");
-  const drop_inner = document.querySelector(".project-list");
-  const project_images = document.querySelectorAll(".hero-img .project");
-  const default_project = document.querySelector(".hero-img .default");
+	// Change hero image on hover
+	const projects = document.querySelectorAll(".project-list li a");
+	const drop_inner = document.querySelector(".project-list");
+	const project_images = document.querySelectorAll(".hero-img .project");
+	const default_project = document.querySelector(".hero-img .default");
 
-  projects.forEach(function(e) {
-    let project_id = e.getAttribute("data-id");
+	projects.forEach(function (e) {
+		let project_id = e.getAttribute("data-id");
 
-    e.addEventListener("mouseover", function() {
-      project_images[project_id].classList.add("active");
-      default_project.classList.remove("active");
-    })
-    e.addEventListener("mouseout", function() {
-      project_images[project_id].classList.remove("active");
-      default_project.classList.add("active");
-    })
-  })
-  })
-
-
-
+		e.addEventListener("mouseover", function () {
+			project_images[project_id].classList.add("active");
+			default_project.classList.remove("active");
+		});
+		e.addEventListener("mouseout", function () {
+			project_images[project_id].classList.remove("active");
+			default_project.classList.add("active");
+		});
+	});
+});
